@@ -3,12 +3,20 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.get('/test', (req,res) => {
-    res.send('테스트 페이지 입니다')
+app.get('/querystring', (req,res) => {
+    res.send('querystring')
 })
 
-app.post('/post-test', (req,res) => {
-    res.send('post 테스트 페이지 입니다')
+app.post('/body-formdata', (req,res) => {
+    res.send('formdata')
+})
+
+app.post('/body-multipart', (res,req) => {
+    res.send('multipart')
+})
+
+app.post('/body-json', (req,res) => {
+    res.send('json')
 })
 
 
